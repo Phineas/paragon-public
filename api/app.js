@@ -12,7 +12,7 @@ fs.readdir("./routes/", (err, files) => {
 
   let routeLinks = files.filter(f => f.split(".").pop() === "js");
   routeLinks.forEach((f, i) => {
-      let props = require(`./routes/${f}`);
+      let props = require("./routes/" + f);
       log(`${i + 1}: ${f} Route loaded `);
       props(app);
   });
@@ -24,7 +24,7 @@ function serve() {
   });
 }
 
-db.connect().then((db) => {
+db.link().then((db) => {
   serve();
 }).catch((err) => {
   log.error(err);

@@ -6,7 +6,7 @@ var url = "mongodb://" + keys.mongo.host + "/" + keys.mongo.database,
     api = {},
     inDb;
 
-api.connect = function() {
+api.link = function() {
   return new Promise(function(resolve, reject) {
     MongoClient.connect(url, function(err, db) {
       if(!err) {

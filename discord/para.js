@@ -12,7 +12,7 @@ parasphere.on("message", (msg) => {
 
   //Set up the message to be logged
   let prioritisedMessageProperties = {id: msg.id, type: msg.channel.type, author: msg.author.id, channel: msg.channel.id, content: msg.content};
-  if(prioritisedMessageProperties.type == "text") prioritisedMessageProperties.server = msg.guild.id;
+  if(prioritisedMessageProperties.type === "text") prioritisedMessageProperties.server = msg.guild.id;
 
   if(msg.attachments.first()) {
     prioritisedMessageProperties.proxyAttachment = msg.attachments.first().proxyURL;
