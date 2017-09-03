@@ -1,0 +1,2 @@
+# paragon-public
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/73979c05f9144fecb3058ef909758c06)](https://www.codacy.com/app/phin/paragon-public?utm_source=github.com&utm_medium=referral&utm_content=Phineas/paragon-public&utm_campaign=badger)
