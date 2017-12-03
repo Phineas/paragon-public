@@ -8,18 +8,18 @@ const express = require("express"),
 app.use(bodyParser.json());
 
 fs.readdir("./routes/", (err, files) => {
-  if(err) log.error(err);
+  if (err) log.error(err);
 
   let routeLinks = files.filter(f => f.split(".").pop() === "js");
   routeLinks.forEach((f, i) => {
-      let props = require("./routes/" + f);
-      log(`${i + 1}: ${f} Route loaded `);
-      props(app);
+    var props = require("./routes/" + f);
+    log(`${i + 1}: ${f} Route loaded `);
+    props(app);
   });
 });
 
 function serve() {
-  app.listen(3000, "127.0.0.1", function (){
+  app.listen(process.env.PORT || 8080, function() {
     log("API -> Now listening for requests");
   });
 }

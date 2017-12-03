@@ -10,7 +10,7 @@ api.requestToken = function() {
       uri: "http://" + config.apiAddress + "/v1/getToken"
     }).then((token) => {
       let tokenJson = JSON.parse(token);
-      if(tokenJson.success) {
+      if (tokenJson.success) {
         resolve(tokenJson.token);
       } else {
         reject(tokenJson.err);
@@ -24,10 +24,10 @@ api.requestToken = function() {
 api.logMessage = function(obj) {
   return new Promise(function(resolve, reject) {
     request.post({
-      uri: "http://" + config.apiAddress + "/v1/logMessage",
+      uri: "http://" + config.apiAddress + "/v1/messages",
       json: obj
     }).then((status) => {
-      if(status.success) {
+      if (status.success) {
         resolve(status.timestamp);
       } else {
         reject(status.err);

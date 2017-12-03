@@ -1,4 +1,4 @@
 {
   "remoteServerAddress": "",
-  "apiAddress": "127.0.0.1:3000"
+  "apiAddress": "127.0.0.1:8080"
 }

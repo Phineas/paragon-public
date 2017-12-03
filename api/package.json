@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Paragon API",
   "main": "app.js",
+  "engines": {
+    "node": ">=8.7.0"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
